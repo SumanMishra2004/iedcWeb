@@ -14,16 +14,16 @@ function SidebarMain() {
   };
 
   return (
-    <div className="h-screen hidden lg:flex lg:w-[15rem] bg-red-500 flex-col overflow-scroll  scrollbar-hide">
+    <div className="h-screen hidden lg:flex lg:w-[15rem]  flex-col overflow-scroll  scrollbar-hide bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-slate-800 via-emerald-300 to-slate-800 border-2 border-sky-200 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#08f,0_0_30px_#08f]">
       <div className="imageArea h-[10rem] w-full flex justify-center items-center">
-        <Fade duration={1000} direction='down' triggerOnce>
+        <Fade duration={1000} direction='down' triggerOnce >
         <img
-          className="h-[5rem] w-[5rem] rounded-full"
+          className="h-[5rem] w-[5rem] rounded-full bg-transparent"
           src="https://png.pngtree.com/png-vector/20191101/ourmid/pngtree-cartoon-color-simple-male-avatar-png-image_1934459.jpg"
           alt="Avatar"
         /></Fade>
       </div>
-      <div className="flex flex-col h-[calc(100%-10rem)] w-full bg-green-400 p-4 space-y-2 justify-center">
+      <div className="flex flex-col h-[calc(100%-10rem)] w-full p-4 space-y-2 justify-center">
         {SidebarElements.map((item, index) =>
           item.type !== "dropdown" ? (
             <Fade key={index} direction='left' duration={1000} triggerOnce>
