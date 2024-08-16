@@ -14,7 +14,7 @@ function SidebarMain() {
   };
 
   return (
-    <div className="h-screen hidden lg:flex lg:w-[15rem]  flex-col overflow-scroll  scrollbar-hide bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-slate-800 via-emerald-300 to-slate-800 border-2 border-sky-200 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#08f,0_0_30px_#08f]">
+    <div className="h-screen hidden lg:flex lg:w-[15rem]  flex-col overflow-scroll  scrollbar-hide bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-slate-800 via-purple-900 to-slate-800 ">
       <div className="imageArea h-[10rem] w-full flex justify-center items-center">
         <Fade duration={1000} direction='down' triggerOnce >
         <img
@@ -23,7 +23,7 @@ function SidebarMain() {
           alt="Avatar"
         /></Fade>
       </div>
-      <div className="flex flex-col h-[calc(100%-10rem)] w-full p-4 space-y-2 justify-center">
+      <div className="flex flex-col h-[calc(100%-10rem)] w-full p-4 space-y-2 justify-center eb-garamond ">
         {SidebarElements.map((item, index) =>
           item.type !== "dropdown" ? (
             <Fade key={index} direction='left' duration={1000} triggerOnce>

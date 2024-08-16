@@ -2,9 +2,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+  
 
-/* For Webkit-based browsers (Chrome, Safari and Opera) */
-
-.ebGaramond {
-    font-family: "EB Garamond";
+.bodoni-moda-sc {
+    font-family: "Bodoni Moda SC", serif;
   }
+
+  
+.eb-garamond {
+    font-family: "EB Garamond", system-ui;
+    
+  }
+  
