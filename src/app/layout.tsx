@@ -1,8 +1,8 @@
-
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import SidebarMain from "@/components/Sidebar/SidebarMain";
+import SidebarMobile from "@/components/Sidebar/SidebarMobile";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +19,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {children}
-        </body>
+        <div className="h-screen w-screen overflow-auto scrollbar-hide sticky flex flex-col lg:flex-row ">
+          <div className="hidden lg:block lg:w-[15rem]">
+            <SidebarMain />
+          </div>
+
+          <div className="block lg:hidden">
+            <SidebarMobile />
+          </div>
+          <div className="mainContaint w-full h-screen lg:w-[calc(100vw-15rem)] lg:max-w-[calc(100vw-14rem)] bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-slate-800 via-blue-950 to-cyan-950 lg:p-4 md:p-3 p-2  sticky ">
+          {children}
+          </div>
+        </div>
+      </body>
     </html>
   );
 }

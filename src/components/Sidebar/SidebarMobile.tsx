@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from "react";
 import { SidebarElements } from "./SidebarElements";
 import Link from "next/link";

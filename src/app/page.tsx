@@ -16,17 +16,8 @@ import { BentoGridDemo } from "./_helper/Bentogrid";
 
 export default function Home() {
   return (
-    <div className="h-screen w-screen overflow-auto scrollbar-hide sticky flex flex-col lg:flex-row ">
-      {/* SidebarMain will be shown on large screens */}
-      <div className="hidden lg:block lg:w-[15rem]">
-        <SidebarMain />
-      </div>
-
-      {/* SidebarMobile will be shown on small screens */}
-      <div className="block lg:hidden">
-        <SidebarMobile />
-      </div>
-      <div className="mainContaint w-full h-screen lg:w-[calc(100vw-15rem)] lg:max-w-[calc(100vw-14rem)] bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-slate-800 via-blue-950 to-cyan-950 lg:p-4 md:p-3 p-2  sticky ">
+    
+    
         <div className="h-full rounded-3xl w-full max-w-full overflow-scroll scrollbar-hide">
           <div className="h-screen bg-blue-400 w-full">
             <div className="bg-gradient-to-tr from-slate-950/90 via-slate-900/75 to-purple-950/50  relative flex h-full w-full flex-col items-center justify-center overflow-hidden dark ">
@@ -197,8 +188,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+   
   );
 }
 
