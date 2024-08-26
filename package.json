@@ -23,7 +23,9 @@
     "swiper": "^11.1.9",
     "tailwind-merge": "^2.5.2",
     "tailwind-scrollbar-hide": "^1.1.7",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "@tsparticles/react": "^3.0.0",
+     "tsparticles": "^3.5.0"
   },
   "devDependencies": {
     "@types/node": "^20",

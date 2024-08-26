@@ -1,22 +1,27 @@
-import  { NavigationSection } from "@/components/profile/Navigation";
+"use client";
 import ProfileImageSection from "@/components/profile/profileImageSection";
-import ProjectSetup from "@/components/profile/ProjectSetup";
 import React from "react";
+import { TabsDemo } from "./_helper/helperTabs";
 
 function Profile() {
   return (
-    <div className="bg-purple-600  border border-gray-100 h-[calc(100vh-2rem)] w-full rounded-2xl flex justify-center items-center">
-       <div className="h-full py-8 lg:w-[85%] w-[95%]  overflow-scroll scrollbar-hide">
-        <ProfileImageSection/>
-        <div className="h-[200vh] w-full flex justify-between lg:flex-row flex-col">
-                <div className=" h-fit lg:w-[60%]  w-full py-11">
-                    <NavigationSection/>
-                </div>
-                <div className=" h-[100vh] lg:w-[35%] w-full bg-green-500"></div>
+    <div
+      className="bg-slate-600  border border-gray-100 h-[calc(100vh-2rem)] w-full rounded-2xl flex justify-center items-center overflow-x-hidden"
+      style={{
+        boxShadow:
+          "inset 0 2px 4px 0 rgb(2 6 23 / 0.3), inset 0 -2px 4px 0 rgb(203 213 225)",
+      }}
+    >
+      <div className="h-full lg:w-[85%] w-[95%] py-6  overflow-scroll scrollbar-hide">
+        <ProfileImageSection />
+        <div className="w-full h-fit flex flex-col md:flex-row justify-around items-center">
+          <div className="h-[38rem]  md:w-[40rem]  w-full py-4">
+            <TabsDemo />
+          </div>
+          <div className="h-[30rem] w-full md:w-[20rem] bg-red-500"></div>
         </div>
-       </div>
+      </div>
     </div>
-    
   );
 }
 

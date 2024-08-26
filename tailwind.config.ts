@@ -1,4 +1,10 @@
 import type { Config } from "tailwindcss"
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+ 
 
 const config = {
   darkMode: ["class"],
@@ -39,6 +45,15 @@ const config = {
           from: { transform: "translateY(0)" },
           to: { transform: "translateY(calc(-100% - var(--gap)))" },
         },
+        orbit: {
+          "0%": {
+            transform:
+              "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
+          },
+          "100%": {
+            transform:
+              "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
+          },}
       },
       animation: {
         grid: "grid 15s linear infinite",
@@ -46,10 +61,24 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "marquee": "marquee var(--duration) linear infinite",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+        orbit: "orbit calc(var(--duration)*1s) linear infinite",
       },
     },
   },
-  plugins: [require("tailwindcss-animate"),require('tailwind-scrollbar-hide')],
+  plugins: [require("tailwindcss-animate"),require('tailwind-scrollbar-hide'),addVariablesForColors],
 } satisfies Config
 
 export default config
+
+
+
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+ 
+  addBase({
+    ":root": newVars,
+  });
+}
