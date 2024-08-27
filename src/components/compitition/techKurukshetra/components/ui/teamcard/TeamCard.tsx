@@ -3,8 +3,9 @@ import "./TeamCard.css";
 
 const TeamCard = ({ profile, name, position, linkedIn, insta, twitter }:any) => {
   return (
-    <div className="card">
-      <img src={profile} alt="" className="-z-1" />
+    <div className="relative w-[225px] h-[247px] bg-black rounded-[10px]  overflow-hidden" style={{perspective: "1000px", boxShadow: "0 0 0 5px #0f1741",
+      transition: "all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)"}}>
+      <img src={profile} alt="" className="-z-1 size-full bg-center hover:scale-150 hover:shadow-2xl hover:shadow-black/20" style={{backgroundSize: "cover",transition:" all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)",}} />
 
       <div>
         <div className="flex items-center justify-center ">
