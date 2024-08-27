@@ -2,7 +2,7 @@
 
 import { MagicCard } from "@/components/compitition/techKurukshetra/components/magicui/magic-card";
 import RetroGrid from "@/components/compitition/techKurukshetra/components/magicui/retro-grid";
-import ParticlesContainer from "@/components/compitition/techKurukshetra/components/particle/ParticleComponents";
+// import ParticlesContainer from "@/components/compitition/techKurukshetra/components/particle/ParticleComponents";
 import { AnimatedPinDemo } from "@/components/compitition/techKurukshetra/components/ui/AnimatedPinPointer";
 import Countdown from "@/components/compitition/techKurukshetra/components/ui/DatePicker";
 import { StickyScroll } from "@/components/compitition/techKurukshetra/components/ui/FileStickyTimeline";
@@ -13,7 +13,10 @@ import SMNavbar from "@/components/compitition/techKurukshetra/components/ui/SMN
 
 import { Fade } from "react-awesome-reveal";
 import { timelineData } from "@/components/compitition/techKurukshetra/components/timelineComponents";
-import TeamSection from "@/components/compitition/techKurukshetra/components/ui/TeamSection";
+
+import { TeamTabs } from "@/components/compitition/techKurukshetra/components/ui/TeamTabs";
+import Rules from "@/components/compitition/techKurukshetra/components/ui/rules";
+import Faq from "@/components/compitition/techKurukshetra/components/ui/faq";
 
 export default function Home() {
   let dt = new Date().getTime();
@@ -72,7 +75,7 @@ export default function Home() {
             <OrbitingCirclesDemo />
           </Fade>
         </div>
-        <ParticlesContainer />
+        {/* <ParticlesContainer /> */}
         <div className="relative z-[555] w-full 2xl:h-[120vh] md:h-[200vh] max-h-fit ">
           <div className=" relative z-[555]  h-fit py-14 px-3 md:px-0 ">
             <Fade
@@ -227,11 +230,11 @@ export default function Home() {
             <StickyScroll content={timelineData} />
           </div>
         </div>
-        <div className="h-screen w-screen bg-blue-500/50 flex justify-between items-center flex-col">
-        
-          <TeamSection />
-        </div>
+        <TeamTabs/>
+        <Rules/>
+        <Faq/>
       </div>
+      
     </div>
   );
 }
