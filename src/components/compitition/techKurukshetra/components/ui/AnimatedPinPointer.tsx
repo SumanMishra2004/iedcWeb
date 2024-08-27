@@ -3,7 +3,7 @@ import React from "react";
 import { PinContainer } from "./3dPin";
 import { cn } from "@/lib/utils";
 
-export function AnimatedPinDemo({className,title,position,desc}:{className?:string,title?:string,position:string,desc?:string}) {
+export function AnimatedPinDemo({className,title,position,desc,image}:{className?:string,title?:string,position:string,desc?:string,image?:string}) {
   return (
     <div className="h-[29rem] w-fit flex items-center justify-center ">
       <PinContainer
@@ -18,7 +18,9 @@ export function AnimatedPinDemo({className,title,position,desc}:{className?:stri
              {desc?desc:"something written over here"}
             </span>
           </div>
-          <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
+          <div className="flex flex-1 w-full rounded-lg mt-4 overflow-hidden" >
+            <img src={image} alt="image" className="h-full w-full" />
+            </div>
         </div>
       </PinContainer>
     </div>

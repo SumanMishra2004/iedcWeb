@@ -1,13 +1,12 @@
  const NavItems = [
-    { name: "About", link: "/#about" },
-    { name: "Domains", link: "/#domain" },
-    { name: "Prizes", link: "/#prize" },
-    { name: "Partners", link: "/#partner" },
-    { name: "Timeline", link: "/#timeline" },
-    { name: "Teams", link: "/#team" },
-    { name: "Rules", link: "/#rule" },
-    { name: "Process", link: "/#process" },
-    { name: "FAQ", link: "/#faq" },
+    { name: "About", link: "/compitition/techkurukshetra/#about" },
+    { name: "Domains", link: "/compitition/techkurukshetra/#domain" },
+    { name: "Prizes", link: "/compitition/techkurukshetra/#prize" },
+    { name: "Partners", link: "/compitition/techkurukshetra/#partner" },
+    { name: "Timeline", link: "/compitition/techkurukshetra/#timeline" },
+    { name: "Teams", link: "/compitition/techkurukshetra/#team" },
+    { name: "Rules", link: "/compitition/techkurukshetra/#rule" },
+    { name: "FAQ", link: "/compitition/techkurukshetra/#faq" },
   ];
 
 export default NavItems

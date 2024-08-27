@@ -4,8 +4,9 @@ export const timelineData = [
         description:
           "1st September-2024 ::: Registration for the event will start from 1st September 2024.",
         content: (
-          <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-            Start Registration
+          <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] items-center justify-center text-white absolute flex flex-col">
+            <img src="/techKuruKshetra/registeropen.jpeg" alt="" className="size-full relative top-0 left-0"/>
+            
           </div>
         ),
       },
@@ -15,7 +16,7 @@ export const timelineData = [
           "20th September-2024 ::: Registration for the event will close on 20th September 2024.",
         content: (
           <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-          Start Registration
+          <img src="/techKuruKshetra/registrationClosed.gif" alt="" className="size-full relative top-0 left-0"/>
         </div>
         ),
       },
@@ -25,7 +26,7 @@ export const timelineData = [
           "27th September-2024 Hackathon will start from 27th September 2024 at 9.30 am.",
         content: (
           <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-            Hackathon start
+             <img src="/techKuruKshetra/hackathonstart.png" alt="" className="size-full relative top-0 left-0"/>
           </div>
         ),
       },

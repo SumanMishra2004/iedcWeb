@@ -72,4 +72,23 @@
   
 *{
   scroll-behavior: smooth;
+  font-family: "EB Garamond", system-ui;
+}
+
+.inner-element {
+ 
+  transform: translateZ(150px);
+  
+}
+.parent-element{
+  transform-style: preserve-3d;
+  &:hover .inner-element{
+    scale: 1.5;
+    
+  }
+}
+
+.bgPositionSetup{
+  background-position-x: -8rem;
+  
 }

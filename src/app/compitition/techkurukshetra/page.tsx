@@ -1,6 +1,6 @@
 "use client";
+import Tilt from "react-parallax-tilt";
 
-import { MagicCard } from "@/components/compitition/techKurukshetra/components/magicui/magic-card";
 import RetroGrid from "@/components/compitition/techKurukshetra/components/magicui/retro-grid";
 // import ParticlesContainer from "@/components/compitition/techKurukshetra/components/particle/ParticleComponents";
 import { AnimatedPinDemo } from "@/components/compitition/techKurukshetra/components/ui/AnimatedPinPointer";
@@ -14,9 +14,11 @@ import SMNavbar from "@/components/compitition/techKurukshetra/components/ui/SMN
 import { Fade } from "react-awesome-reveal";
 import { timelineData } from "@/components/compitition/techKurukshetra/components/timelineComponents";
 
-import { TeamTabs } from "@/components/compitition/techKurukshetra/components/ui/TeamTabs";
 import Rules from "@/components/compitition/techKurukshetra/components/ui/rules";
 import Faq from "@/components/compitition/techKurukshetra/components/ui/faq";
+
+import Footer from "@/components/compitition/techKurukshetra/components/ui/Footer";
+import { TabsDemo } from "@/components/compitition/techKurukshetra/components/ui/TabsDemo.Team";
 
 export default function Home() {
   let dt = new Date().getTime();
@@ -38,8 +40,14 @@ export default function Home() {
         </div>
       </div>
       <Countdown dt={days_difference * 24 * 60 * 60 * 1000} />
-      <div className=" h-fit w-full relative inset-0 z-20 ">
-        <div className=" z-20 md:h-screen h-fit py-7 w-full flex justify-around md:flex-row flex-col items-center   ">
+      <div className="h-auto w-full relative bg-gradient-to-r from-black via-transparent to-black ">
+
+     
+      <div className=" h-fit w-full relative inset-0 z-[555] ">
+        <div
+          className=" z-20 md:h-screen h-fit py-7 w-full flex justify-around md:flex-row flex-col items-center   "
+          id="about"
+        >
           <div className="h-auto md:w-[40%] w-[90%] text-justify text-white flex flex-col justify-center items-center gap-5 py-4">
             <Fade
               direction="down"
@@ -76,7 +84,10 @@ export default function Home() {
           </Fade>
         </div>
         {/* <ParticlesContainer /> */}
-        <div className="relative z-[555] w-full 2xl:h-[120vh] md:h-[200vh] max-h-fit ">
+        <div
+          className="relative z-[555] w-full 2xl:h-[120vh] md:h-[200vh] max-h-fit "
+          id="domain"
+        >
           <div className=" relative z-[555]  h-fit py-14 px-3 md:px-0 ">
             <Fade
               className="w-full  h-auto md:text-[5rem] font-extrabold text-white flex justify-center items-center pb-6 text-5xl"
@@ -86,18 +97,25 @@ export default function Home() {
               Our Domain
             </Fade>
             <div className="flex h-full w-full flex-col flex-wrap justify-around items-center gap-4  lg:flex-row">
-              <Fade
+              <Fade 
                 direction="right"
                 className="md:w-[20rem] w-full h-[22rem]"
                 duration={800}
                 delay={800}
               >
-                <MagicCard
-                  className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl size-full "
-                  gradientColor="#262626"
-                >
-                  Magic
-                </MagicCard>
+                <Tilt 
+                 perspective={500}
+                 scale={1.1}
+                 className="parent-element h-[20rem] md:w-[18rem] w-full rounded-3xl bg-[url('/techKurukshetra/aimlBG.jpg')] bg-cover bgPositionSetup"
+                 
+                  >
+                  
+                    <div className="h-full w-full text-white text-xl font-bold flex items-center justify-center inner-element ">
+
+                    <h1 className=" h-fit w-fit rounded-xl">AI/ML</h1>
+                    </div>
+                 
+                </Tilt>
               </Fade>
               <Fade
                 direction="right"
@@ -105,25 +123,38 @@ export default function Home() {
                 duration={500}
                 delay={500}
               >
-                <MagicCard
-                  className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl md:w-[20rem] w-full h-[22rem]"
-                  gradientColor="#262626"
-                >
+                 <Tilt 
+                 perspective={500}
+                 className="parent-element h-[20rem] md:w-[18rem] w-full rounded-3xl bg-[url('/techKurukshetra/healthTech.jpg')] bg-cover"
+                 
+                  >
+                  
+                    <div className="h-full w-full text-white text-xl font-bold flex items-center justify-center inner-element ">
+
+                    <h1 className="">Health Tech</h1>
+                    </div>
+                 
+                </Tilt>
                   Card
-                </MagicCard>
+                
               </Fade>
               <Fade
                 direction="left"
                 className="md:w-[20rem] w-full h-[22rem]"
                 duration={500}
                 delay={500}
-              >
-                <MagicCard
-                  className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl md:w-[20rem] w-full h-[22rem]"
-                  gradientColor="#262626"
-                >
-                  Card
-                </MagicCard>
+              > <Tilt 
+              perspective={500}
+              className="parent-element h-[20rem] md:w-[18rem] w-full rounded-3xl bg-[url('/techKurukshetra/security.jpg')] bg-cover"
+              
+               >
+               
+                 <div className="h-full w-full text-white text-xl font-bold flex items-center justify-center inner-element ">
+
+                 <h1 className="text-lg">SECURITY</h1>
+                 </div>
+              
+             </Tilt>
               </Fade>
               <Fade
                 direction="left"
@@ -131,12 +162,18 @@ export default function Home() {
                 duration={800}
                 delay={800}
               >
-                <MagicCard
-                  className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl md:w-[20rem] w-full h-[22rem]"
-                  gradientColor="#262626"
-                >
-                  Card
-                </MagicCard>
+                 <Tilt 
+                 perspective={500}
+                 className="parent-element h-[20rem] md:w-[18rem] w-full rounded-3xl bg-[url('/techKurukshetra/fintech.jpg')] bg-cover"
+                 
+                  >
+                  
+                    <div className="h-full w-full text-white text-xl font-bold flex items-center justify-center inner-element ">
+
+                    <h1 className="">FINTECH</h1>
+                    </div>
+                 
+                </Tilt>
               </Fade>
               <Fade
                 direction="right"
@@ -144,12 +181,18 @@ export default function Home() {
                 duration={800}
                 delay={500}
               >
-                <MagicCard
-                  className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl md:w-[20rem] w-full h-[22rem]"
-                  gradientColor="#262626"
-                >
-                  Card
-                </MagicCard>
+                <Tilt 
+                 perspective={500}
+                 className="parent-element h-[20rem] md:w-[18rem] w-full rounded-3xl bg-[url('/techKurukshetra/websitetech.jpg')] bg-cover"
+                 
+                  >
+                  
+                    <div className="h-full w-full text-white text-xl font-bold flex items-center justify-center inner-element ">
+
+                    <h1 className="">WEB TECH</h1>
+                    </div>
+                 
+                </Tilt>
               </Fade>
               <Fade
                 direction="left"
@@ -157,12 +200,18 @@ export default function Home() {
                 duration={800}
                 delay={800}
               >
-                <MagicCard
-                  className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl md:w-[20rem] w-full h-[22rem]"
-                  gradientColor="#262626"
-                >
-                  Card
-                </MagicCard>
+                 <Tilt 
+                 perspective={500}
+                 className="parent-element h-[20rem] md:w-[18rem] w-full rounded-3xl bg-[url('/techKurukshetra/appDev.jpg')] bg-cover"
+                 
+                  >
+                  
+                    <div className="h-full w-full text-white text-xl font-bold flex items-center justify-center inner-element ">
+
+                    <h1 className="">APP TECH</h1>
+                    </div>
+                 
+                </Tilt>
               </Fade>
               <Fade
                 direction="right"
@@ -170,17 +219,26 @@ export default function Home() {
                 duration={800}
                 delay={500}
               >
-                <MagicCard
-                  className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl md:w-[20rem] w-full h-[22rem]"
-                  gradientColor="#262626"
-                >
-                  Card
-                </MagicCard>
+                 <Tilt 
+                 perspective={500}
+                 className="parent-element h-[20rem] md:w-[18rem] w-full rounded-3xl bg-[url('/techKurukshetra/openToAll.jpg')] bg-cover"
+                 
+                  >
+                  
+                    <div className="h-full w-full text-white text-xl font-bold flex items-center justify-center inner-element ">
+
+                    <h1 className="">OPEN PROJECTS</h1>
+                    </div>
+                 
+                </Tilt>
               </Fade>
             </div>
           </div>
         </div>
-        <div className="PrizeArea h-fit py-24 w-full flex justify-around items-center flex-col relative z-[555]">
+        <div
+          className="PrizeArea h-fit py-24 w-full flex justify-around items-center flex-col relative z-[555]"
+          id="prize"
+        >
           <Fade
             className="w-full  h-auto md:text-[5rem] font-extrabold text-white flex justify-center items-center pb-6 text-5xl"
             direction="down"
@@ -194,6 +252,7 @@ export default function Home() {
                 className="w-[20rem] h-[25rem]"
                 title="20000 Rs"
                 position="second"
+                image="/techKurukshetra/secondPrize.jpg"
               />
             </Fade>
             <Fade direction="left" duration={800} delay={500} triggerOnce>
@@ -201,6 +260,7 @@ export default function Home() {
                 className="w-[20rem] h-[25rem]"
                 title="30000 Rs"
                 position="First"
+                image="/techKurukshetra/firstPrize.jpg"
               />
             </Fade>
             <Fade direction="right" duration={800} delay={500} triggerOnce>
@@ -208,11 +268,15 @@ export default function Home() {
                 className="w-[20rem] h-[25rem]"
                 title="10000 Rs"
                 position="Third"
+                 image="/techKurukshetra/thirdPrize.png"
               />
             </Fade>
           </div>
         </div>
-        <div className="paartnearArea w-screen h-fit flex items-center justify-between flex-col relative z-[555]">
+        <div
+          className="paartnearArea w-screen h-fit flex items-center justify-between flex-col relative z-[555]"
+          id="partner"
+        >
           <Fade direction="down">
             <div className="md:text-[5rem] text-[2.5rem] font-extrabold text-white italic h-auto w-full">
               Our Partners
@@ -222,19 +286,35 @@ export default function Home() {
             <PartnerShip />
           </div>
         </div>
-        <div className="relative z-[555] h-fit w-screen  flex flex-col justify-center items-center py-10 md:py-5 ">
-          <h1 className="md:text-6xl  text-4xl py-6 font-bold text-white">
-            Timeline
-          </h1>
+        <div
+          className="relative z-[555] h-fit w-screen  flex flex-col justify-center items-center py-10 md:py-5 "
+          id="timeline"
+        >
+          <Fade direction="down" triggerOnce>
+            <h1 className="md:text-6xl  text-4xl py-6 font-bold text-white">
+              Timeline
+            </h1>
+          </Fade>
           <div className="md:h-[75%] h-full w-full box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
             <StickyScroll content={timelineData} />
           </div>
         </div>
-        <TeamTabs/>
-        <Rules/>
-        <Faq/>
-      </div>
-      
+        <div
+          className="h-fit w-full flex flex-col gap-3 items-center justify-center"
+          id="team"
+        >
+          <div className="w-full h-fit text-white text-6xl font-extrabold text-center">
+            Our Teams
+          </div>
+          <div className="w-full h-fit flex">
+            <TabsDemo />
+          </div>
+         
+        </div>
+        <Rules />
+        <Faq />
+        <Footer />
+      </div> </div>
     </div>
   );
 }
