@@ -31,19 +31,19 @@ function SMNavbar(): ReactElement {
     <div className="navItems w-[95%] h-[90%] flex justify-between items-center">
       <div className="h-[4rem] w-[9rem] flex gap-3">
         <img
-          src="/techkurukshetra/uemLogo.png"
+          src="/techKurukshetra/uemLogo.png"
           alt="uem logo"
           className="h-full w-1/2 rounded-xl"
         />
         <img
-          src="/techkurukshetra/iemLogo.png"
+          src="/techKurukshetra/iemLogo.png"
           alt="iem logo"
           className="h-full w-1/2 rounded-xl"
         />
       </div>
       <div className="h-[4rem] w-[4rem] ">
         <img
-          src="/techkurukshetra/logo.png"
+          src="/techKurukshetra/logo.png"
           alt="logo"
           className="size-full scale-[2] pl-3"
         />
