@@ -6,12 +6,14 @@ import TeamSection from "./TeamSection";
 
 export function TabsDemo() {
   const tabs = [
+
+    
     {
       title: "Mentor",
       value: "mentor",
       content: (
         
-          <DummyContent/>
+          <DummyContent type="mentor" />
     
       ),
     },
@@ -20,7 +22,7 @@ export function TabsDemo() {
       value: "core",
       content: (
         
-          <DummyContent />
+          <DummyContent type="core"/>
         
       ),
     },
@@ -29,7 +31,16 @@ export function TabsDemo() {
       value: "playground",
       content: (
         
-          <DummyContent />
+          <DummyContent type="management"/>
+       
+      ),
+    },
+    {
+      title: "Volunteer",
+      value: "volunteer",
+      content: (
+        
+          <DummyContent type="volunteer"/>
        
       ),
     },
@@ -43,10 +54,10 @@ export function TabsDemo() {
   );
 }
 
-const DummyContent = () => {
+const DummyContent = ({type}: {type?: string}) => {
   return (
     <div className="w-full md:h-[calc(100%-2.25rem)] h-[calc(100%-1.25rem)] bg-blue-300 flex justify-start items-start overflow-auto scrollbar-hide rounded-2xl">
-<TeamSection/>
+<TeamSection type={type}/>
     
     </div>
   );
