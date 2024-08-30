@@ -37,7 +37,7 @@ export default function Home() {
     setTimeout(() => {
       
       setLoading(false);
-    }, 1500); // 2 seconds delay
+    }, 4000); // 2 seconds delay
   }, []);
 
 
